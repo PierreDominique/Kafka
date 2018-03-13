@@ -30,7 +30,9 @@ sudo cp config/server.properties config/server-2.properties
 ```
 
 ## Création d'un nouveau broker
-Nouveau fichier config/server.properties
+
+Création d'un nouveau fichier server.properties config/server-2.properties.
+Il est nécessaire de modifier les informations suivantes :
  
 * id broker
 
