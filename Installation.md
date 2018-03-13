@@ -34,15 +34,7 @@ sudo cp config/server.properties config/server-2.properties
 Création d'un nouveau fichier server.properties config/server-2.properties.
 Il est nécessaire de modifier les informations suivantes :
  
-* id broker
-
-`broker.id=2`
-* le port (à décommenter)
-
-`listeners=PLAINTEXT://:9093` 
-* chemin des logs
-
-`log.dir=/tmp/kafka-logs-2`
-* changer le localhost par l'adresse ip publique de la machine avec zookeeper
-
-` zookeeper.connect=localhost:2181`
+* id broker : `broker.id=2`
+* le port (à décommenter) : `listeners=PLAINTEXT://:9093` 
+* chemin des logs : `log.dir=/tmp/kafka-logs-2`
+* changer le localhost par l'adresse ip publique de la machine avec zookeeper : ` zookeeper.connect=localhost:2181`
