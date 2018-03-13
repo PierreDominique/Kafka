@@ -28,3 +28,19 @@ Il faut un fichier server.properties par broker lancé
 sudo cp config/server.properties config/server-1.properties
 sudo cp config/server.properties config/server-2.properties
 ```
+
+## Création d'un nouveau broker
+Nouveau fichier config/server.properties
+ 
+* id broker
+
+`broker.id=2`
+* le port (à décommenter)
+
+`listeners=PLAINTEXT://:9093` 
+* chemin des logs
+
+`log.dir=/tmp/kafka-logs-2`
+* changer le localhost par l'adresse ip publique de la machine avec zookeeper
+
+` zookeeper.connect=localhost:2181`
