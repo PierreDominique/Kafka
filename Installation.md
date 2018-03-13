@@ -21,14 +21,14 @@ sudo bin/kafka-server-start.sh config/server.properties
 ```
 sudo bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
 
-sudo bin/kafka-topics.sh --list --zookeeper localhost:2181
+sudo bin/kafka-topics.sh --list --zookeeper localhost:2181 (lister les brokers)
 ```
 
 * Création d'un producer
 ```
 sudo bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
 ```
-* Création d'un producer
+* Création d'un consumer
 ```
 sudo bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
 ```
@@ -36,15 +36,13 @@ sudo bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic tes
 sudo bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic test --from-beginning --consumer.config config/consumer_1.properties
 ```
 
-Il faut faire un fichier server.properties par broker lancé
+## Création d'un nouveau broker
 
+Il faut faire un fichier server.properties par broker lancé.
 ```
 sudo cp config/server.properties config/server-1.properties
 sudo cp config/server.properties config/server-2.properties
 ```
-
-## Création d'un nouveau broker
-
 Création d'un nouveau fichier server.properties config/server-2.properties.
 
 Il est nécessaire de modifier les informations suivantes :
