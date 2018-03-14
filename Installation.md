@@ -21,7 +21,7 @@ sudo bin/kafka-server-start.sh config/server.properties
 ```
 sudo bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
 
-sudo bin/kafka-topics.sh --list --zookeeper localhost:2181 (lister les brokers)
+sudo bin/kafka-topics.sh --list --zookeeper localhost:2181 (lister les topics)
 ```
 
 * Création d'un producer
@@ -58,6 +58,8 @@ Il est nécessaire de modifier les informations suivantes dans les nouveaux fich
 * chemin des logs : `log.dir=/tmp/kafka-logs-2`
 * changer le localhost par l'adresse ip publique de la machine avec zookeeper : ` zookeeper.connect=localhost:2181`
 
+delete un topic
+pour supp  sudo bin/kafka-topics.sh --delete --zookeeper 34.249.95.103:2181 --topic yolo
 
 ## Kill du broker 2
 ```
@@ -84,3 +86,9 @@ Topic: cars-topic       Partition: 2    Leader: 0       Replicas: 0,2,3 Isr: 0,3
 Topic: cars-topic       Partition: 3    Leader: 1       Replicas: 1,3,0 Isr: 1,3,0
 Topic: cars-topic       Partition: 4    Leader: 1       Replicas: 2,1,3 Isr: 1,3,2
 ```
+
+##Utiliser Kafka Connect pour importer/exporter des données
+
+
+
+
